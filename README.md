@@ -11,6 +11,9 @@ automática de estoque e gestão dos usuários que acessam o sistema, com autent
 | Nome completo      |
 |--------------------|
 | Kauã Sousa Cardoso |
+| Pedro Henrique Máximo |
+| Júlia Inácio |
+| Luiza Mel |
 
 ## 💡 Proposta
 
