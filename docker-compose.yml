@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: livraria-postgres
+    environment:
+      POSTGRES_DB: livraria
+      POSTGRES_USER: livraria
+      POSTGRES_PASSWORD: livraria
+    ports:
+      - "5432:5432"
+    volumes:
+      - livraria-dados:/var/lib/postgresql/data
+
+volumes:
+  livraria-dados:
