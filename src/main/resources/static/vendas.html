@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendas | Livraria Páginas</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header id="cabecalho" class="cabecalho"></header>
+
+<main class="conteudo">
+    <h1>Vendas</h1>
+    <div id="mensagem" class="mensagem" role="alert"></div>
+
+    <div class="grade">
+        <section class="cartao">
+            <h2 id="tituloFormulario">Nova venda</h2>
+            <form id="formulario" novalidate>
+                <div class="campo">
+                    <label for="livroId">Livro</label>
+                    <select id="livroId" name="livroId" required></select>
+                </div>
+                <div class="campo">
+                    <label for="nomeCliente">Nome do cliente</label>
+                    <input id="nomeCliente" name="nomeCliente" maxlength="120" required>
+                </div>
+                <div class="linhaCampos">
+                    <div class="campo">
+                        <label for="quantidade">Quantidade</label>
+                        <input id="quantidade" name="quantidade" type="number" min="1" step="1" required>
+                    </div>
+                    <div class="campo">
+                        <label for="dataVenda">Data da venda</label>
+                        <input id="dataVenda" name="dataVenda" type="date" required>
+                    </div>
+                </div>
+                <div class="campo">
+                    <label for="formaPagamento">Forma de pagamento</label>
+                    <select id="formaPagamento" name="formaPagamento" required></select>
+                </div>
+                <div id="valorTotalPrevisto" class="resumoValor">Total previsto: R$ 0,00</div>
+                <div class="acoesFormulario">
+                    <button id="btnSalvar" class="botao botaoPrimario" type="submit">Salvar</button>
+                    <button id="btnCancelar" class="botao botaoSecundario" type="button">Limpar</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="cartao">
+            <div class="topoTabela">
+                <h2>Vendas registradas</h2>
+            </div>
+            <table id="tabela">
+                <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Cliente</th>
+                    <th>Livro</th>
+                    <th>Qtd.</th>
+                    <th>Valor unit.</th>
+                    <th>Total</th>
+                    <th>Pagamento</th>
+                    <th>Ações</th>
+                </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+    </div>
+</main>
+
+<script type="module" src="/js/vendas.js"></script>
+</body>
+</html>

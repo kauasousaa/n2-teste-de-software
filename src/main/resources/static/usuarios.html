@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuários | Livraria Páginas</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header id="cabecalho" class="cabecalho"></header>
+
+<main class="conteudo">
+    <h1>Usuários do sistema</h1>
+    <div id="mensagem" class="mensagem" role="alert"></div>
+
+    <div class="grade">
+        <section class="cartao">
+            <h2 id="tituloFormulario">Novo usuário</h2>
+            <form id="formulario" novalidate>
+                <div class="campo">
+                    <label for="nome">Nome</label>
+                    <input id="nome" name="nome" maxlength="100" required>
+                </div>
+                <div class="campo">
+                    <label for="email">E-mail</label>
+                    <input id="email" name="email" type="email" maxlength="120" required>
+                </div>
+                <div class="campo">
+                    <label for="senha">Senha</label>
+                    <input id="senha" name="senha" type="password" maxlength="60" autocomplete="new-password">
+                </div>
+                <div class="campo">
+                    <label for="perfil">Perfil</label>
+                    <select id="perfil" name="perfil" required></select>
+                </div>
+                <div class="campo campoCheckbox">
+                    <input id="ativo" name="ativo" type="checkbox" checked>
+                    <label for="ativo">Usuário ativo</label>
+                </div>
+                <div class="acoesFormulario">
+                    <button id="btnSalvar" class="botao botaoPrimario" type="submit">Salvar</button>
+                    <button id="btnCancelar" class="botao botaoSecundario" type="button">Limpar</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="cartao">
+            <div class="topoTabela">
+                <h2>Usuários cadastrados</h2>
+            </div>
+            <table id="tabela">
+                <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>E-mail</th>
+                    <th>Perfil</th>
+                    <th>Situação</th>
+                    <th>Cadastro</th>
+                    <th>Ações</th>
+                </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+    </div>
+</main>
+
+<script type="module" src="/js/usuarios.js"></script>
+</body>
+</html>
